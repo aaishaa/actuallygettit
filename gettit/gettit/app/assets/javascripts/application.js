@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// JUST ANOTHER SUGGESTION
+// 'use strict';
+// $("#search_button").click(function(event){
+//   event.preventDefault();
+//   $.ajax({
+//     url: 'localhost:3001/serach'
+//     data: {
+//       query: $("#field").val()}
+//     }
+//   })
+// })
