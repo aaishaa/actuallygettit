@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  # root 'shops#index'
   get 'search/:query' => 'shops#search'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

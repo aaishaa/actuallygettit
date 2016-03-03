@@ -3,12 +3,47 @@
 <head>
   <title>Gettit</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-2.2.0.min.js' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+  <a href="#" class="brand-logo center">logo</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li>
+      
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      
+    </li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li>
+      
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      
+    </li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+</nav>
 
 <%= yield %>
+
 
 </body>
 </html>

@@ -1,2 +1,2 @@
-module ShopHelper
+module ShopsHelper
 end

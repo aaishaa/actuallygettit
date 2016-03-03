@@ -13,7 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
+//= require search
+
 //= require_tree .
+
+  $(document).ready(function(){
+      $('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 240
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      }
+    );
+  });
 
 // JUST ANOTHER SUGGESTION
 // 'use strict';
