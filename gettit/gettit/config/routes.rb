@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # root 'shops#index'
+  resources :users
   get 'search/:query' => 'shops#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
