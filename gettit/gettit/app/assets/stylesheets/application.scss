@@ -14,8 +14,10 @@
  *= require_self
  */
  @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: color("blue-grey", "darken-4") !default;
+$navbar-font-color: color("white", "lighten-5");
  @import "materialize/extras/nouislider";
  @import "materialize";
 
  @import "style";
+ nav .input-field label i {color: $navbar-font-color};

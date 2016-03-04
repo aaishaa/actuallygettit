@@ -1,3 +1,31 @@
+// ul.side-nav, nav {
+//   background: #f50057; /* For browsers that do not support gradients */
+//   background: -webkit-linear-gradient(left top, #f50057, #ffca28); /* For Safari 5.1 to 6.0 */
+//   background: -o-linear-gradient(bottom right, #f50057, #ffca28); /* For Opera 11.1 to 12.0 */
+//   background: -moz-linear-gradient(bottom right, #f50057, #ffca28); /* For Firefox 3.6 to 15 */
+//   background: linear-gradient(to bottom right, #f50057, #ffca28); /* Standard syntax */
+// }
+// ul.side-nav, nav {
+//   background: #ff4081; /* For browsers that do not support gradients */
+//   background: -webkit-linear-gradient(left top, #ff4081, #ffca28); /* For Safari 5.1 to 6.0 */
+//   background: -o-linear-gradient(bottom right, #ff4081, #ffca28); /* For Opera 11.1 to 12.0 */
+//   background: -moz-linear-gradient(bottom right, #ff4081, #ffca28); /* For Firefox 3.6 to 15 */
+//   background: linear-gradient(to bottom right, #ff4081, #ffca28); /* Standard syntax */
+// }
+body{
+  background: #64ffda; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #64ffda, #F180C4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #64ffda, #F180C4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #64ffda, #F180C4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #64ffda, #F180C4); /* Standard syntax */
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons{
+  line-height: 60px;
+}
+
+.container {margin-top: 20px;}
 p {
   font-size: 1em;
 }
@@ -23,7 +51,38 @@ div.marker{
 .unselected{
   display: none;
 }
-.side-nav i.material-icons {color: black;}
-.col{
 
+input#search{
+  margin-bottom: 0;
+}
+.row .col{ padding: 0 1rem;}
+.card-panel{
+  position: relative;
+  padding: 0;
+  margin: 0.25rem 0 0.25rem 0;
+  padding-bottom: 29%;
+}
+.card-image{
+  text-align: center;
+  background: white;
+  padding-top: 1%;
+}
+.card-image img{
+  position: relative;
+  height: 100%;
+  padding-top: 3%;
+}
+.card-action{
+  position: absolute;
+  bottom: 0;
+  height: 25%;
+  width: 100%;
+  background:#263238;
+  color: white;
+  margin: 0;
+}
+.card-action p {
+  color: white;
+  padding: 2% 0% 0% 5%;
+  margin: 0;
 }

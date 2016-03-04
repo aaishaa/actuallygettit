@@ -10,16 +10,17 @@
 </head>
 <body>
 <nav>
-  <a href="#" class="brand-logo center">logo</a>
+  <a href="#" class="brand-logo center">Gettit</a>
   <ul class="right hide-on-med-and-down">
     <li><a href="#!">First Sidebar Link</a></li>
     <li>
       
         <form>
           <div class="input-field">
-            <input id="search" type="search" required>
+            <input id="search" type="search" onsearch="loadSearch()" required>
             <label for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
+            <input type="submit" style="position: absolute; left: -9999px"/>
           </div>
         </form>
       
@@ -29,13 +30,13 @@
     <li><a href="#!">First Sidebar Link</a></li>
     <li>
       
-        <form>
+        <!-- <form> -->
           <div class="input-field">
-            <input id="search" type="search" required>
+            <input id="search" type="search" onsearch="loadSearch" required>
             <label for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
           </div>
-        </form>
+        <!-- </form> -->
       
     </li>
   </ul>
@@ -44,6 +45,11 @@
 
 <%= yield %>
 
-
+<script type="text/javascript">
+  var loadSearch = function(){
+    var path = '/search/' + $('input#search').val();
+    window.location.assign(path);
+  }
+</script>
 </body>
 </html>

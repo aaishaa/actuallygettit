@@ -1,38 +1,24 @@
-<!-- <ul>
-  <%# @links.each do |link| %>
-    <%#= check_box_tag(:pet_dog) %>
-    <%#= label_tag(:pet_dog, "I own a dog") %>
-    <li class="shopbop product">
-      <div class="marker unselected">+</div>
-      <p class="result image"><%#= image_tag link['imgSrc'].strip %><%#= link %></p>
-      <p class="brand"><%#= link['brand'].strip %></p>
-      <p class="title"><%#= link['title'].strip %></p>
-      <p class="price"><%#= link['price'].strip %></p>
-    </li>
-
-  <%# end %>
-</ul> -->
-<% results = @links %>
 <div class="container">
+  <% results = @links %>
   
-    <% results.each do |result| %>
-      <% row = results.take(3) %>
-      <div class="row">
+  <% results.each do |result| %>
+    <% row = results.take(3) %>
+    <div class="row">
       <% row.each do |col| %>
         <div class="col s12 m4">
-          <%#= col %>
-          <div class="marker unselected">+</div>
-          <p class="result image"><%= image_tag col['imgSrc'].strip %><%#= link %></p>
-          <p class="brand"><%= col['brand'].strip %></p>
-          <p class="title"><%= col['title'].strip %></p>
-          <p class="price"><%= col['price'].strip %></p>
+          <div class="card-panel">
+            <div class="marker unselected">+</div>
+            <div class="card-image"><%= image_tag col['imgSrc'].strip %><%#= link %></div>
+            <div class="card-action" >
+              <p class="brand"><%= col['brand'].strip %></p>
+              <p class="title"><%= col['title'].strip %></p>
+              <p class="price"><%= col['price'].strip %></p>
+            </div>
+          </div>
         </div>
-
       <% end %>
-      </div>
-    <% end %>
-  
-<!-- <p><%#= results.drop(3) %></p> -->
-
+    </div>
+    <% results = results.drop(3) %>
+  <% end %>
   
 </div>
