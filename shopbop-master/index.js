@@ -17,3 +17,6 @@ app.get('/search/:query', (req, res) => {
 		}
 	});
 });
+
+
+// http://localhost:3001/search/whatever-item

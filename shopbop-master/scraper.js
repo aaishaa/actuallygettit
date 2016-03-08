@@ -24,10 +24,35 @@ const search = (query, callback) => {
 
 				let links = [];
 
-				async.each($('.product a.photo'), (ele, next_element) => {
-					let link = $(ele).attr('href');
-					
-					links.push(`https://www.shopbop.com${link}`);
+				// async.each($('.product a.photo'), (ele, next_element) => {
+					async.each($('.product'), (ele, next_element) => {
+					let prodInfo = {};
+
+					// let link = $(ele).attr('href');
+					 let imgSrc = $(ele).find('a.photo img').attr("src");
+					 prodInfo.imgSrc = imgSrc;
+
+					 let brand = $(ele).find('div.brand').text();
+					 prodInfo.brand = brand;
+					 let title = $(ele).find('div.title').text();
+					 prodInfo.title = title;
+
+					 let price = $(ele).find('div.price');
+					 let retail = price.find('span.retail-price').text();
+					 prodInfo.retail = retail;
+
+					 let currentPrice = price.find('span.sale-price-low').text();
+					 prodInfo.price = currentPrice;
+
+					 let discount = false;
+
+					 if (currentPrice !== retail){
+					 	discount = true;
+					 };
+					 prodInfo.onSale = discount;
+
+					 links.push(prodInfo);
+					// links.push(`https://www.shopbop.com${link}`);
 					next_element();
 				}, (error) => {
 					next(error, links)
